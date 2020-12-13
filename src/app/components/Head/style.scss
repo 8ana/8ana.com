@@ -1,0 +1,206 @@
+header {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(114, 144, 179, 0.06);
+  background-clip: content-box;
+  height: 60px;
+  line-height: 60px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  :global {
+    .wp {
+      display: flex;
+    }
+  }
+
+  nav {
+    flex-grow: 1;
+    display: flex;
+    margin-left: 30px;
+    a {
+      position: relative;
+      margin-right: 30px;
+      display: inline-block;
+      font-size: 16px;
+
+      &:hover,
+      &.active {
+        color: #18191a;
+      }
+      &.active {
+        &::after {
+          position: absolute;
+          content: '';
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 3px;
+          border-radius: 1.5px;
+          background-color: $d-color-primary;
+        }
+      }
+    }
+    &.show {
+      display: inline-block;
+    }
+  }
+}
+
+.on-search,
+.on-home,
+.on-menu {
+  display: none;
+}
+
+.header-logo {
+  width: 100px;
+  flex-basis: 100px;
+  background-image: url(../../static/8ana.svg);
+  background-size: 100px auto;
+  background-repeat: no-repeat;
+  background-position: 0 15px;
+  position: relative;
+}
+
+.header-tool {
+  font-size: 16px;
+  span {
+    margin-left: 15px;
+  }
+  a {
+    margin-left: 15px;
+  }
+}
+
+.header-search {
+  width: 300px;
+  flex-basis: 300px;
+  background-color: $d-bg-color-grey;
+  margin-top: 12px;
+  height: 36px;
+  border-radius: 3px;
+  display: flex;
+  border: 1px solid #ebebeb;
+  position: relative;
+
+  input {
+    width: 260px;
+    margin-top: 6px;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 15px;
+    border: none;
+    background: none;
+    float: left;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+    margin-top: 1px;
+    text-align: right;
+    float: right;
+    color: #8590a6;
+  }
+
+  &.show {
+    display: inline-block;
+  }
+}
+
+.header-nav {
+  flex-grow: 1;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+@media (min-width: 0px) and (max-width: 1200px) {
+  header {
+    height: 48px;
+    line-height: 48px;
+
+    nav {
+      display: none;
+      margin-left: 0;
+      padding-left: 10px;
+
+      &.show {
+        position: absolute;
+        top: 47px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgba(26, 26, 26, 0.1);
+        height: 30px;
+        border-radius: 0 0 5px 5px;
+        overflow-y: hidden;
+        overflow-x: auto;
+        z-index: 10;
+      }
+    }
+  }
+
+  .header-nav {
+    line-height: 30px;
+  }
+
+  .header-search {
+    display: none;
+    margin-top: 0;
+
+    &.show {
+      position: absolute;
+      top: 35px;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 1px 3px rgba(26, 26, 26, 0.1);
+    }
+  }
+
+  .header-tool {
+    flex-grow: 1;
+    text-align: right;
+    padding-right: 15px;
+    white-space: nowrap;
+
+    a,
+    span {
+      padding: 0 5px;
+    }
+  }
+
+  .header-logo {
+    width: 90px;
+    background-size: 80px auto;
+    background-position: 5px 11px;
+    flex-basis: 90px;
+  }
+
+  .on-search,
+  .on-home,
+  .on-menu {
+    display: inline;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 399px) {
+  header {
+    height: 36px;
+    line-height: 36px;
+
+    nav {
+      &.show {
+        top: 35px;
+      }
+    }
+  }
+
+  .header-logo {
+    width: 80px;
+    background-size: 70px auto;
+    background-position: 5px 7px;
+  }
+}

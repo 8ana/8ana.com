@@ -1,0 +1,12 @@
+logs
+*.log
+node_modules
+
+
+dist
+https
+*.DS_Store
+package-lock.json
+yarn.lock
+config/index.js
+归档.zip

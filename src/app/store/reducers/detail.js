@@ -1,0 +1,33 @@
+import cloneObj from '../clone'
+
+const initialState = {}
+
+export default (state = cloneObj(initialState), action = {}) => {
+  const { name, data = {} } = action
+  switch (action.type) {
+    case 'GET_DETAIL':
+      if (name && data) state[name] = data
+      break
+    case 'GET_LOVE':
+      if (name && data) state[name] = data
+      break
+    case 'GET_VOD_NEWS':
+      if (name && data) state[name] = data
+      break
+    case 'UPDATE_SUBJECT_DIGG':
+      state[action.id].data[name] += 1
+      break
+    case 'UPDATE_SUBJECT_MARK':
+      if (state[action.id].data[`${name}id`]) {
+        state[action.id].data[`${name}id`] = null
+      } else {
+        state[action.id].data[`${name}id`] = action.id
+      }
+      break
+    default:
+      return state
+  }
+  return cloneObj(state)
+}
+
+export const getDetail = (state, name) => state.detail[name] || {}

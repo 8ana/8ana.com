@@ -1,0 +1,130 @@
+.article-body {
+  padding: 10px 20px 0;
+
+  h1 {
+    font-size: 24px;
+    padding: 10px 0 20px;
+  }
+}
+
+.article-content {
+  padding-bottom: 20px;
+  line-height: 2;
+}
+
+.ep-like {
+  padding: 0 20px;
+}
+
+.eplist {
+  display: flex;
+  flex-flow: wrap;
+  max-height: 132px;
+  overflow: hidden;
+  margin-top: 10px;
+
+  &.auto {
+    overflow: visible;
+    max-height: inherit;
+  }
+
+  li {
+    width: 46px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 5px;
+    margin-right: 7px;
+    margin-top: 5px;
+    border: 1px solid #e8f1ff;
+    text-align: center;
+
+    &.active {
+      border-color: $d-text-color-hover;
+
+      a {
+        color: $d-text-color-hover;
+      }
+    }
+
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+
+    span {
+      border-color: $d-color-primary transparent transparent;
+      border-style: solid dashed dashed;
+      border-width: 5px;
+      display: inline-block;
+      font-size: 0;
+      height: 0;
+      line-height: 0;
+      vertical-align: middle;
+      width: 0;
+      margin-top: 4px;
+    }
+  }
+}
+
+.article-context {
+  height: 30px;
+  margin-bottom: 10px;
+
+  a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 0 15px;
+    height: 24px;
+    line-height: 24px;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+
+    &:hover {
+      background-color: $d-text-color-hover;
+      color: #fff;
+    }
+  }
+}
+
+.eplist-more {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.go-detail {
+  margin-top: 15px;
+  display: block;
+  color: $d-color-primary;
+}
+
+.title {
+  h2 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 0) and (max-width: 1200px) {
+  .article-body {
+    padding: 10px 10px 0;
+
+    h1 {
+      padding: 0 10px 10px 0;
+    }
+  }
+
+  .article-body,
+  .article-bottom {
+    background-color: #fff;
+  }
+
+  .article-bottom {
+    padding: 0 10px;
+  }
+
+  .ep-like {
+    padding: 0;
+  }
+
+  .article-ads {
+    margin: 0 -10px;
+  }
+}

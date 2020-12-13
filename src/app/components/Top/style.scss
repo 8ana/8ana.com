@@ -1,0 +1,41 @@
+.top {
+  position: relative;
+
+  ul {
+    margin-top: -2px;
+    li {
+      margin-top: 18px;
+      display: flex;
+
+      a {
+        flex-grow: 1;
+        @include clamp(1);
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.top-li__score {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  text-align: right;
+  color: #8590a6;
+}
+
+.top-li__num {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #ccd0d7;
+  color: #fff;
+  flex-basis: 20px;
+  text-align: center;
+  line-height: 20px;
+
+  &.on {
+    background-color: #f25d8e;
+    color: #fff;
+  }
+}

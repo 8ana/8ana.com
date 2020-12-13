@@ -1,0 +1,23 @@
+.detail-mini {
+  display: flex;
+  img {
+    width: 100px;
+    margin-right: 20px;
+  }
+}
+
+.detail-info {
+  p {
+    margin-top: 0 !important;
+    margin-bottom: 10px;
+  }
+  a {
+    color: $d-text-color-hover;
+  }
+  b {
+    color: #999;
+  }
+  .clamp {
+    @include clamp(1);
+  }
+}

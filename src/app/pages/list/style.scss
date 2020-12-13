@@ -1,0 +1,39 @@
+.filter {
+  padding: 10px 0;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+
+  dl {
+    dt {
+      float: left;
+      color: #666;
+    }
+
+    dd {
+      margin-left: 40px;
+      word-wrap: break-word;
+      display: flex;
+      flex-flow: wrap;
+
+      a {
+        margin-right: 10px;
+        white-space: nowrap;
+
+        &.cur {
+          color: $d-text-color-hover;
+        }
+      }
+
+      span {
+        flex-grow: 1;
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1200px) {
+  .filter {
+    padding: 10px;
+  }
+}

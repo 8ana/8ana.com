@@ -1,0 +1,38 @@
+.list {
+  display: flex;
+  li {
+    width: 14.285%;
+    text-align: center;
+    h4 {
+      @include clamp(2);
+    }
+    img {
+      width: 70px;
+      display: block;
+    }
+  }
+}
+
+.weeklist {
+  display: flex;
+}
+
+.active {
+  color: #f00;
+}
+
+.today {
+  color: $d-color-primary;
+}
+
+.week-out {
+  margin-top: -55px;
+  background-color: #fff;
+  padding: 10px 10px 0;
+}
+
+@media (min-width: 0) and (max-width: 1200px) {
+  .week-out {
+    margin-top: -48px;
+  }
+}

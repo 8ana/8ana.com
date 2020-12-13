@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "noUnusedLocals": false,
+    "paths": {
+      "@/*": ["src/app/*"],
+      "@config": ["config/index.js"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["src", "config"]
+}

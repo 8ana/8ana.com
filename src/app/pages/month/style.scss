@@ -1,0 +1,71 @@
+.month-box {
+  > div {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  :global {
+    .pb20 {
+      padding-bottom: 16px !important;
+    }
+  }
+}
+
+.year {
+  display: flex;
+  flex-flow: wrap;
+  li {
+    position: relative;
+    height: 36px;
+    line-height: 36px;
+    width: 63px;
+    text-align: center;
+    cursor: pointer;
+    span {
+      display: block;
+    }
+    &.cur {
+      color: $d-text-color-hover;
+      background-color: #fff;
+      margin-bottom: -1px;
+      span {
+        border-bottom: 1px solid $d-text-color-hover;
+      }
+    }
+  }
+  border-bottom: 1px solid #ebebeb;
+}
+
+.month {
+  display: flex;
+  background-color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  a {
+    margin: 0 15px;
+    width: 70px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    &.cur {
+      color: #fff;
+      background-color: $d-text-color-hover;
+    }
+  }
+}
+
+@media (min-width: 0) and (max-width: 1200px) {
+  .month {
+    a {
+      padding: 0 10px;
+    }
+  }
+  .year {
+    li {
+      width: 16.6%;
+    }
+  }
+}

@@ -1,0 +1,251 @@
+.comment {
+  margin-top: 20px;
+}
+
+.comment-form {
+  position: relative;
+  margin: 10px 80px 0 85px;
+
+  .comment-avatar {
+    position: absolute;
+    left: -80px;
+    width: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 70px;
+      display: block;
+    }
+  }
+
+  .validate {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .comment-face {
+      margin-top: 10px;
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border: 1px solid $d-border-color;
+      background-color: $d-bg-color-grey;
+      border-radius: $d-border-radius-sm;
+    }
+
+    .comment-code {
+      margin-top: 10px;
+      display: flex;
+      input {
+        width: 120px;
+        height: 38px;
+        padding: 0 10px;
+        border: 1px solid $d-border-color;
+        border-radius: $d-border-radius-sm;
+      }
+
+      img {
+        margin-left: 10px;
+        width: 120px;
+        height: 35px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  form {
+    display: flex;
+  }
+
+  textarea {
+    width: 100%;
+    height: 70px;
+    line-height: 24px;
+    border: 1px solid $d-border-color;
+    outline: none;
+    padding: 5px 10px;
+    background-color: $d-bg-color-grey;
+    border-radius: $d-border-radius-sm;
+    &:focus {
+      background-color: #fff;
+    }
+  }
+
+  button {
+    position: absolute;
+    right: -85px;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    background-color: $d-color-primary;
+    color: #fff;
+    font-size: 18px;
+    border-radius: $d-border-radius-sm;
+    &:disabled {
+      background-color: $d-text-color-disable;
+    }
+  }
+
+  .no-login {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 2;
+    background-color: $d-bg-color-grey;
+    border-radius: $d-border-radius-sm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $d-text-color-grey;
+    span {
+      display: inline-block;
+      background-color: $d-color-primary;
+      color: #fff;
+      border-radius: $d-border-radius-sm;
+      padding: 0 10px;
+      margin: 0 5px;
+      height: 24px;
+      line-height: 24px;
+      cursor: pointer;
+    }
+  }
+}
+
+.comment-list {
+  margin-top: 20px;
+  border-top: 1px solid $d-border-color;
+  color: #646464;
+
+  a {
+    color: $d-text-color-hover;
+  }
+}
+
+.comment-empty {
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+.comment-list__list {
+  > li {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ebebeb;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.commit-list__people {
+  display: flex;
+
+  .avatar {
+    display: flex;
+    align-items: center;
+
+    img {
+      display: block;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+    }
+  }
+
+  .title {
+    margin-right: 5px;
+  }
+
+  .time,
+  .title {
+    color: #8590a6;
+    font-size: 12px;
+  }
+}
+
+.commit-list__zan {
+  flex-grow: 1;
+  align-self: center;
+  text-align: right;
+}
+
+.commit-list__content {
+  margin-left: 50px;
+  color: #333;
+}
+
+.commit-sublist {
+  background-color: #f6f6f6;
+  padding: 10px;
+
+  > li {
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 0) and (max-width: 1200px) {
+  .comment {
+    margin: 0 -10px;
+  }
+  .comment-form {
+    margin-left: 55px;
+    .comment-avatar {
+      left: -50px;
+      width: 40px;
+      img {
+        width: 40px;
+      }
+    }
+    textarea {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 10px;
+    }
+    button {
+      height: 40px;
+      line-height: 40px;
+      right: -75px;
+    }
+    .no-login {
+      height: 40px;
+    }
+    .validate {
+      .comment-face {
+        width: 45px;
+        height: 32px;
+      }
+
+      .comment-code {
+        margin-top: 10px;
+        input {
+          width: 85px;
+          height: 32px;
+          padding: 0 3px;
+        }
+
+        img {
+          width: 70px;
+          height: 30px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
